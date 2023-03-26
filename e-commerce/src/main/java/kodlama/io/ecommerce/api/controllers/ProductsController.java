@@ -1,7 +1,7 @@
 package kodlama.io.ecommerce.api.controllers;
 
 import kodlama.io.ecommerce.business.abstracts.ProductService;
-import kodlama.io.ecommerce.entities.concretes.Product;
+import kodlama.io.ecommerce.entities.Product;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +16,7 @@ public class ProductsController {
         this.service = service;
     }
 
-    @GetMapping
+    @GetMapping("/getAll")
     public List<Product> getAll() {
         return service.getAll();
     }
